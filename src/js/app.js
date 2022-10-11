@@ -1,5 +1,6 @@
 // image slider with swiper.js
 const imageSlider = new Swiper(".image-slider", {
+  allowTouchMove: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -8,7 +9,8 @@ const imageSlider = new Swiper(".image-slider", {
 
 const textFlipper = new Swiper(".text-flipper", {
   effect: "flip",
-  grabCursor: true,
+  allowTouchMove: false,
+  grabCursor: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
