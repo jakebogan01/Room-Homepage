@@ -567,9 +567,9 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1130px) {
   .container {
-    max-width: 1024px;
+    max-width: 1130px;
   }
 }
 
@@ -980,7 +980,7 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1130px) {
   .lg\:relative {
     position: relative;
   }
