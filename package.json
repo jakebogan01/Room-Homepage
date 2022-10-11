@@ -4,7 +4,7 @@
   "description": "Room homepage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "minify": "css-minify -f dist/output.css"
   },
   "author": "Jake Bogan",
   "license": "ISC",
