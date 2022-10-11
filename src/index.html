@@ -3,15 +3,166 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/dist/output.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <link href="/dist/output.css" rel="stylesheet">
         <title>Room Homepage</title>
+        <link rel="stylesheet" href="dist/output.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <script src="js/swiper-bundle.min.js" defer></script>
+        <script src="js/app.js" defer></script>
+        <style>
+            .swiper-button-next::after, .swiper-button-prev::after {
+                content: "";
+            }
+        </style>
     </head>
-    <body>
-        <h1 class="text-red-500">
-            Hello world!
-        </h1>
+    <body class="font-League-Spartan overflow-x-hidden">
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- navbar -->
+    <nav class="fixed z-20 w-full h-32 grid items-center md:bg-transparent md:text-md text-sm">
+        <ul class="flex md:gap-20 gap-10 md:pl-20 pl-5 overflow-x-auto">
+            <!-- mobile nav toggle -->
+            <li class="md:hidden grid">
+                <button>
+                    <img id="open-navbar-button" src="images/icon-hamburger.svg" alt="open-mobile-navbar-btn">
+                    <img id="close-navbar-button" class="hidden" src="images/icon-close.svg" alt="close-mobile-navbar-btn">
+                </button>
+            </li>
+            <li id="company-logo" class="flex items-center md:ml-0 ml-20">
+                <img src="images/logo.svg" alt="company-logo">
+            </li>
+
+            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+                <a href="#">home</a>
+            </li>
+            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+                <a href="#">shop</a>
+            </li>
+            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+                <a href="#">about</a>
+            </li>
+            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+                <a href="#">contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="grid lg:grid-rows-3 grid-rows-2 h-screen w-full bg-white lg:min-h-[calc(800px)] min-h-[calc(1500px)]">
+        <section class="grid lg:grid-cols-7 grid-cols-1 lg:grid-rows-1 grid-rows-2 lg:row-span-2 relative z-10">
+
+            <!-- image slider -->
+            <div class="swiper image-slider col-span-4 w-full h-full relative z-10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="w-full h-full object-cover sm:grid hidden" src="images/desktop-image-hero-1.jpg" alt="innovative-ways-slider-image-desktop">
+                        <img class="w-full h-full object-cover sm:hidden grid" src="images/mobile-image-hero-1.jpg" alt="innovative-ways-slider-image-mobile">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="w-full h-full object-cover sm:grid hidden" src="images/desktop-image-hero-2.jpg" alt="across-the-globe-slider-image-desktop">
+                        <img class="w-full h-full object-cover sm:hidden grid" src="images/mobile-image-hero-2.jpg" alt="across-the-globe-slider-image-mobile">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="w-full h-full object-cover sm:grid hidden" src="images/desktop-image-hero-3.jpg" alt="best-materials-slider-image-desktop">
+                        <img class="w-full h-full object-cover sm:hidden grid" src="images/mobile-image-hero-3.jpg" alt="best-materials-slider-image-mobile">
+                    </div>
+                </div>
+            </div>
+
+            <!-- text slider -->
+            <div class="swiper text-flipper col-span-3 lg:relative block w-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide grid">
+                        <div class="lg:w-4/6 w-5/6 lg:h-4/6 place-self-center grid content-center gap-7">
+                            <h1 class="sm:text-4xl font-bold text-black text-2xl">Discover innovative ways to decorate</h1>
+                            <p class="text-very-dark-gray sm:text-md text-sm">
+                                We provide unmatched quality, comfort, and style for property
+                                owners across the country. Our experts combine form and
+                                function in bringing your vision to life. Create a room in your
+                                own style with our collection and make your property a
+                                reflection of you and what yo love.
+                            </p>
+                            <button class="self-start w-60 text-left text-black font-bold relative tracking-widest text-sm lg:text-md hover:text-gray-400">
+                                SHOP NOW
+                                <span class="absolute -right-8 top-1.5">
+                                    <img src="images/icon-arrow.svg" alt="shop-now-arrow-right">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide grid">
+                        <div class="lg:w-4/6 w-5/6 lg:h-4/6 place-self-center grid content-center gap-7">
+                            <h1 class="sm:text-4xl font-bold text-black text-2xl">We are available all across the globe</h1>
+                            <p class="text-very-dark-gray sm:text-md text-sm">
+                                With stores all over the world, it's easy for you to find furniture
+                                for your home or place of business. Locally, we're in most
+                                major cities throughout the country. Find the branch nearest
+                                you using our store locator. Any questions? Don't hesitate to
+                                contact us today.
+                            </p>
+                            <button class="self-start w-60 text-left text-black font-bold relative tracking-widest text-sm lg:text-md hover:text-gray-400">
+                                SHOP NOW
+                                <span class="absolute -right-8 top-1.5">
+                                    <img src="images/icon-arrow.svg" alt="shop-now-arrow-right">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide grid">
+                        <div class="lg:w-4/6 w-5/6 lg:h-4/6 place-self-center grid content-center gap-7">
+                            <h1 class="sm:text-4xl font-bold text-black text-2xl">Manufactured with the best materials</h1>
+                            <p class="text-very-dark-gray sm:text-md text-sm">
+                                Our modern furniture store provide a high level of quality. Our
+                                company has invested in advanced technology to ensure that
+                                every product is made as perfect and as consistent as
+                                possible. With three decades of experience in this industry, we
+                                understand what customers want for their home and office.
+                            </p>
+                            <button class="self-start w-60 text-left text-black font-bold relative tracking-widest text-sm lg:text-md hover:text-gray-400">
+                                SHOP NOW
+                                <span class="absolute -right-8 top-1.5">
+                                    <img src="images/icon-arrow.svg" alt="shop-now-arrow-right">
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide navigation -->
+                <div class="absolute lg:bottom-0 lg:top-auto -top-[72px]">
+                    <div class="bg-black p-9 w-32 place-items-center grid">
+                        <div class="swiper-button-prev">
+                            <img src="images/icon-angle-left.svg" alt="slider-navigation-arrow-left">
+                        </div>
+                        <div class="swiper-button-next">
+                            <img src="images/icon-angle-right.svg" alt="slider-navigation-arrow-right">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about section -->
+        <section class="lg:row-span-1 grid lg:grid-cols-10 lg:grid-rows-1 grid-rows-4 grid-cols-1 place-items-center overflow-hidden">
+            <div class="lg:col-span-3 w-full h-full row-span-1">
+                <img class="w-full h-full object-cover" src="images/image-about-dark.jpg" alt="dark-chairs-image">
+            </div>
+            <div class="col-span-4 w-full h-full grid place-items-center row-span-2">
+                <div class="grid content-center gap-5 lg:w-5/6 w-11/12 h-5/6">
+                    <h2 class="font-bold text-black sm:text-lg text-sm sm:tracking-smallest tracking-tiny">ABOUT OUR FURNITURE</h2>
+                    <p class="text-very-dark-gray">
+                        Our multifunctional collection blends design and function to suit your
+                        individual taste. Make each room unique, or pick a cohesive theme that best
+                        express your interests and what inspires you. Find the furniture pieces you
+                        need, from traditional to contemporary styles or anything in between.
+                        Product specialists are available to help you create your dream space.
+                    </p>
+                </div>
+            </div>
+            <div class="col-span-3 w-full h-full row-span-1">
+                <img class="w-full h-full object-cover" src="images/image-about-light.jpg" alt="white-chair-image">
+            </div>
+        </section>
+    </main>
+
     </body>
 </html>
