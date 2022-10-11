@@ -16,7 +16,7 @@
             }
         </style>
     </head>
-    <body class="font-League-Spartan overflow-x-hidden">
+    <body class="antialiased font-League-Spartan overflow-x-hidden">
 
     <!-- navbar -->
     <nav class="fixed z-20 w-full h-32 grid items-center md:bg-transparent md:text-md text-sm">
@@ -29,20 +29,26 @@
                 </button>
             </li>
             <li id="company-logo" class="flex items-center md:ml-0 ml-20">
-                <img src="images/logo.svg" alt="company-logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="company-logo">
+                </a>
             </li>
 
-            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+            <li class="md:text-white text-black font-bold md:grid hidden list-items group">
                 <a href="#">home</a>
+                <span class="h-[0.125rem] bg-transparent group-hover:bg-white transition-colors"></span>
             </li>
-            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+            <li class="md:text-white text-black font-bold md:grid hidden list-items group">
                 <a href="#">shop</a>
+                <span class="h-[0.125rem] bg-transparent group-hover:bg-white transition-colors"></span>
             </li>
-            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+            <li class="md:text-white text-black font-bold md:grid hidden list-items group">
                 <a href="#">about</a>
+                <span class="h-[0.125rem] bg-transparent group-hover:bg-white transition-colors"></span>
             </li>
-            <li class="md:text-white text-black font-bold md:grid hidden list-items hover:border-b-2 md:hover:border-white hover:border-black">
+            <li class="md:text-white text-black font-bold md:grid hidden list-items group">
                 <a href="#">contact</a>
+                <span class="h-[0.125rem] bg-transparent group-hover:bg-white transition-colors"></span>
             </li>
         </ul>
     </nav>
@@ -79,7 +85,7 @@
                                 owners across the country. Our experts combine form and
                                 function in bringing your vision to life. Create a room in your
                                 own style with our collection and make your property a
-                                reflection of you and what yo love.
+                                reflection of you and what you love.
                             </p>
                             <button class="self-start w-60 text-left text-black font-bold relative tracking-widest text-sm lg:text-md hover:text-gray-400">
                                 SHOP NOW
